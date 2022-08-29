@@ -2,6 +2,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,9 +16,43 @@ public class Main {
         //myHelper.createTableNoten("MeineNoten.db");
 //        myHelper.createTableTeilnehmerInnen("MeineNoten.db");
         //myHelper.updateTeilnehmerIn("MeineNoten.db");
-       // helper.insertTeilnehmerInWithNames("MeineNoten.db", "Jakob", "Wasalski", 150);
-       helper.insertNotenWithParameter("MeineNoten.db", 1, "Datenbanken", 2);
+       //helper.insertTeilnehmerInWithNames("MeineNoten.db", "Karol", "Karolczyk", 150);
+       //helper.insertNotenWithParameter("MeineNoten.db", 2, "Datenbanken", 1);
 
+        //helper.selectTeilnehmerInnen("MeineNoten.db");
+        //helper.printAllNoten("MeineNoten.db");
+        //helper.insertNotenPrepared("MeineNoten.db", 1,"DBP", 1);
+
+//        TeilnehmerIn teilnehmerIn =new TeilnehmerIn(6,"Elisabeth","Unger",200);
+//        helper.updateTeilnehmerIn(teilnehmerIn);
+
+//        TeilnehmerIn teilnehmerIn3 =new TeilnehmerIn(1,"Karolina","Wasalska",250);
+//        helper.updateTeilnehmerIn(teilnehmerIn3);
+
+//        TeilnehmerIn t5 = helper.getTeilnehmerIn(5);
+//        System.out.println(t5);
+//        t5.setBonuspunkte(30);
+//        System.out.println(t5);
+//        helper.updateTeilnehmerIn(t5);
+
+
+        TeilnehmerIn t1=helper.getTeilnehmerIn(1);
+        System.out.println("\n" + t1);
+        System.out.println(helper.getNotenFuerTN(1));
+
+//        ArrayList<TeilnehmerIn> alleTeilnehmerInnen = helper.getAlleTeilnehmerInnen();
+//        System.out.println("Alle TN:\n" + alleTeilnehmerInnen);
+//        helper.deleteNoten(3);
+//
+//
+//
+//
+//        TeilnehmerIn suche = helper.getTeilnehmerIn(6);
+//
+//        TeilnehmerIn tNeu =new TeilnehmerIn(-1, "Elisabeth","Unger",300);
+//        helper.insertTeilnehmerIn(tNeu);
+//
+//        System.out.println("Mehr als 100 Bonuspunkte: " + helper.getAlleTeilnehmerInnenMitFilter(100));
 
 //        int affectedRows = helper.updateNoten("MeineNoten.db",1,3,"Webdesign",2);
 //
@@ -34,6 +69,7 @@ public class Main {
 //        } else {
 //            System.out.println("Note wurde gelöscht");
 //        }
+        //helper.deleteTeilnehmerWithID("MeineNoten.db",7);
     }
 
 

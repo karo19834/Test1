@@ -45,7 +45,10 @@ public class dbHelper {
                     "    NotenId INTEGER PRIMARY KEY AUTOINCREMENT,\n" +
                     "    TeilInNr int, -- Foreign Key Constrain wird nachträglich hinzugefügt\n" +
                     "    Fach varchar(50),\n" +
-                    "    Note int\n" +
+                    "    Note int,\n" +
+                    " FOREIGN KEY ( " +
+                    " TeilInNr  ) "+
+                    " REFERENCES TeilnehmerInnen (TeilInNr)  ON UPDATE NO ACTION" +
                     ")";
 
             Statement ddlCreateNotenStmt = conn.createStatement();
